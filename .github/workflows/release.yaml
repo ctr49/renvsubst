@@ -26,13 +26,13 @@ jobs:
       fail-fast: false
       matrix:
         job:
-          #- { target: arm-unknown-linux-gnueabihf     , arch: x86_64,  os: ubuntu-latest, use-cross: true }
-          - { target: aarch64-unknown-linux-musleabihf , arch: aarch64, os: ubuntu-latest, use-cross: true }
-          #- { target: armv7-unknown-linux-gnueabihf   , arch: x86_64,  os: ubuntu-latest, use-cross: true }
-          #- { target: armv7-unknown-linux-musleabihf  , arch: x86_64,  os: ubuntu-latest, use-cross: true }
-          #- { target: x86_64-apple-darwin             , arch: x86_64,  os: macos-10.15                   }
-          #- { target: x86_64-unknown-linux-gnu        , arch: x86_64,  os: ubuntu-latest, use-cross: true }
-          - { target: x86_64-unknown-linux-musl        , arch: x86_64,  os: ubuntu-latest, use-cross: true }
+          #- { target: arm-unknown-linux-gnueabihf    , arch: x86_64,  os: ubuntu-latest, use-cross: true }
+          - { target: aarch64-unknown-linux-musl     , arch: aarch64, os: ubuntu-latest, use-cross: true }
+          #- { target: armv7-unknown-linux-gnueabihf  , arch: x86_64,  os: ubuntu-latest, use-cross: true }
+          #- { target: armv7-unknown-linux-musleabihf , arch: x86_64,  os: ubuntu-latest, use-cross: true }
+          #- { target: x86_64-apple-darwin            , arch: x86_64,  os: macos-10.15                   }
+          #- { target: x86_64-unknown-linux-gnu       , arch: x86_64,  os: ubuntu-latest, use-cross: true }
+          - { target: x86_64-unknown-linux-musl      , arch: x86_64,  os: ubuntu-latest, use-cross: true }
     steps:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
       - name: Install prerequisites
